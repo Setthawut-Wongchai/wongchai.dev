@@ -1,0 +1,70 @@
+---
+title: Getting Started
+description: Environment setup guide for Android developers and portal contributors.
+---
+
+# 💻 Developer Getting Started Guide
+
+Follow this guide to configure your local development environment for building both the Android Application and the Dev Portal web layer.
+
+## 📋 Prerequisites
+
+Ensure you have the following installed on your machine:
+
+- **Node.js**: `v20.x` or later
+- **JDK**: OpenJDK 17 or 21 (Temurin or Amazon Corretto recommended)
+- **Android Studio**: Ladybug / Meerkat or later
+- **Android SDK**: API Level 34 & 35
+
+---
+
+## ⚙️ 1. Portal Web Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/androidtoyar/dev-portal.git
+cd dev-portal
+
+# Install dependencies
+npm install
+
+# Setup local environment variables
+cp .env.example .env.local
+
+# Run Next.js dev server
+npm run dev
+```
+
+The portal will be live at `http://localhost:3000`.
+
+---
+
+## 📱 2. Android Project Build
+
+```bash
+# Clean build cache
+./gradlew clean
+
+# Build debug APK locally
+./gradlew assembleDebug
+
+# Build staging test APK
+./gradlew assembleStaging
+
+# Install directly to connected USB/Wi-Fi Android device
+./gradlew installStaging
+```
+
+---
+
+## 🗄️ 3. Database Migrations (Drizzle ORM)
+
+When updating the database schema in `src/db/schema.ts`:
+
+```bash
+# Generate SQL migration file
+npx drizzle-kit generate
+
+# Push migrations directly to Supabase DB
+npx drizzle-kit push
+```
