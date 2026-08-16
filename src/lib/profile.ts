@@ -24,7 +24,7 @@ export const profile = {
   } satisfies Localized,
   yearsExperience: 5,
   contact: {
-    email: 'jamez.stw@gmail.com',
+    email: 'setthawut@wongchai.dev',
     github: 'https://github.com/jameszimi',
     linkedin: 'https://www.linkedin.com/in/setthawut-wongchai-875252146/',
     location: {
