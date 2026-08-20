@@ -152,7 +152,7 @@ export function HomeClient() {
             </Link>
 
             <a
-              href={profile.contact.github}
+              href={profile.contact.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="android-pill-secondary"

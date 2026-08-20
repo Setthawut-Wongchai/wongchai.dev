@@ -26,7 +26,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'hero.title2': 'ด้วยความแม่นยำและความปลอดภัย',
     'hero.sub': 'ผม เสฎฐวุฒิ (เจมส์) นักพัฒนา Android ที่มีประสบการณ์ 5 ปีในการสร้างและดูแลแอปที่ใช้งานจริง ตั้งแต่แอปเช่าจักรยานไฟฟ้าแบบ Multi-tenant ไปจนถึงระบบยืนยันตัวตนดิจิทัลและการเซ็นข้อมูลอย่างปลอดภัย',
     'hero.ctaPrimary': 'ติดต่อร่วมงาน',
-    'hero.ctaSecondary': 'ดูโค้ดบน GitHub',
+    'hero.ctaSecondary': 'ดูประวัติบน LinkedIn',
 
     // Interactive Tabs (Real skill pillars)
     'tab.overview': 'Architecture',
@@ -144,7 +144,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'hero.title2': 'with Security & Precision',
     'hero.sub': "I'm Setthawut (James), an Android Developer with 5 years of experience building and maintaining production apps — from a multi-tenant e-bike rental platform to secure digital identity and signing systems.",
     'hero.ctaPrimary': 'Get in Touch',
-    'hero.ctaSecondary': 'View Code on GitHub',
+    'hero.ctaSecondary': 'View Profile on LinkedIn',
 
     // Interactive Tabs (Real skill pillars)
     'tab.overview': 'Architecture',
