@@ -35,7 +35,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'tab.perf': 'Testing & Delivery',
 
     'pillars.eyebrow': 'Engineering Pillars',
-    'pillars.title': 'สิ่งที่ผมทำได้จริงในงาน Android',
+    'pillars.title': 'ความเชี่ยวชาญและมาตรฐานการพัฒนา Android',
 
     // Tab 1: Architecture
     'tab1.eyebrow': 'โครงสร้างที่ดูแลง่าย',
