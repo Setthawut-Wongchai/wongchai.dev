@@ -1,7 +1,8 @@
 import { getDocBySlug, getAllDocs } from '@/lib/docs';
+import { getUserSession } from '@/actions/auth';
 import { DocsSidebar } from '@/components/DocsSidebar';
 import { MarkdownRenderer } from '@/components/MarkdownRenderer';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import type { Metadata } from 'next';
 
 interface DocsPageProps {
@@ -28,6 +29,11 @@ export async function generateMetadata({ params }: DocsPageProps): Promise<Metad
 }
 
 export default async function DocsPage({ params }: DocsPageProps) {
+  const { role } = await getUserSession();
+  if (role === 'public') {
+    redirect('/');
+  }
+
   const resolvedParams = await params;
   const slug = resolvedParams.slug ? resolvedParams.slug.join('/') : 'index';
   const doc = getDocBySlug(slug);

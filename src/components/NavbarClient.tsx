@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Smartphone, BookOpen, Sparkles, Code2, Briefcase, Bot } from 'lucide-react';
+import { Sparkles, Code2, Briefcase, Bot } from 'lucide-react';
 import { useLanguage } from '@/lib/LanguageContext';
 import { profile } from '@/lib/profile';
 import { LanguageToggle } from './LanguageToggle';
@@ -50,20 +50,6 @@ export function NavbarClient({ user, role }: NavbarClientProps) {
               <Briefcase className="h-3.5 w-3.5 text-[#34a853]" />
               {t('nav.experience')}
             </Link>
-            <Link
-              href="/docs"
-              className="px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/10 transition-colors flex items-center gap-1.5"
-            >
-              <BookOpen className="h-3.5 w-3.5 text-[#9b72cb]" />
-              {t('nav.docs')}
-            </Link>
-            <Link
-              href="/releases"
-              className="px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/10 transition-colors flex items-center gap-1.5"
-            >
-              <Smartphone className="h-3.5 w-3.5 text-[#4285f4]" />
-              {t('nav.releases')}
-            </Link>
           </nav>
         </div>
 
@@ -75,7 +61,7 @@ export function NavbarClient({ user, role }: NavbarClientProps) {
           <LanguageToggle />
 
           <Link
-            href="/releases"
+            href="/#contact"
             className="hidden sm:inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-white text-black hover:bg-[#dadce0] transition-all hover:scale-[1.02] shadow-sm"
           >
             <Sparkles className="h-3.5 w-3.5 text-[#4285f4]" />

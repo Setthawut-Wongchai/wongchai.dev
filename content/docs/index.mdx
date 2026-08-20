@@ -5,7 +5,7 @@ description: Complete developer documentation, testing workflows, and API specif
 
 # 🚀 Dev & Tester Documentation
 
-Welcome to the internal engineering and testing documentation hub. This portal provides comprehensive guides for running local environments, executing QA test suites, distributing Android binaries, and reporting issues.
+Welcome to the internal engineering and testing documentation hub. This portal provides comprehensive guides for running local environments and executing QA test suites.
 
 ## 📌 Quick Navigation
 
@@ -13,32 +13,12 @@ Welcome to the internal engineering and testing documentation hub. This portal p
 | :--- | :--- | :--- |
 | **[Getting Started](/docs/getting-started)** | Setup local environment, Gradle configs, and keys | Developers |
 | **[Testing Guide](/docs/testing-guide)** | End-to-end testing, ADB commands, and QA test matrices | QA / Testers |
-| **[App Releases](/releases)** | Direct APK download dashboard & Changelogs | All Teams |
 
 ---
 
 ## 🛠️ Architecture Overview
 
-The system is built on modern, scalable technologies:
+The system is built on the following technologies:
 
-- **Android Client**: Kotlin, Jetpack Compose, Coroutines/Flow, Hilt Dependency Injection, Room Local DB, Retrofit & Ktor.
+- **Android Client**: Kotlin, Java, Jetpack Compose, MVVM & Clean Architecture, Room / Realm / Firebase, Coroutines & RxJava, Retrofit & OkHttp, Dagger 2 & Koin.
 - **Backend & Database**: Next.js App Router, Supabase PostgreSQL, Drizzle ORM.
-- **CI/CD Pipeline**: GitHub Actions automated build & lint workflows triggering release webhooks.
-
-```mermaid
-graph LR
-    Dev[Developer / Git Push] --> CI[GitHub Actions CI/CD]
-    CI --> Build[Build Staging & Release APK]
-    CI --> Webhook[Supabase Webhook API]
-    Webhook --> DB[(Postgres / Supabase)]
-    DB --> Portal[Dev & Tester Portal /releases]
-    Tester[QA / Tester] --> Portal
-```
-
----
-
-## 📱 Tester Release Channels
-
-1. **Staging (`/releases?env=Staging`)**: Daily automated builds connected to mock/staging APIs for active feature testing.
-2. **UAT (`/releases?env=UAT`)**: Release candidates connected to production mirror environments for user acceptance.
-3. **Production (`/releases?env=Prod`)**: Signed store builds.

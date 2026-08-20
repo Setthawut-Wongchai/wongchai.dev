@@ -7,16 +7,7 @@ description: Testing checklist, ADB log capture commands, and issue submission w
 
 This document outlines the testing protocols for verifying Android builds across Staging, UAT, and Production candidates.
 
-## 📥 1. Installing Test Builds
-
-1. Navigate to the **[Releases Dashboard](/releases)**.
-2. Select your designated environment (**Staging** or **UAT**).
-3. Tap **Download APK** or scan the **QR Code** with your test device.
-4. If prompted on Android, allow *“Install unknown apps”* from your browser/scanner.
-
----
-
-## 🔍 2. Capturing Android Logs (ADB)
+## 🔍 1. Capturing Android Logs (ADB)
 
 When encountering a crash, freeze, or ANR, capture the logcat using ADB:
 
@@ -33,9 +24,9 @@ adb logcat -d > crash_log.txt
 
 ---
 
-## 📝 3. Reporting Issues & Feedback
+## 📝 2. Reporting Issues & Feedback
 
-When filing a bug via the **Feedback Modal** on `/releases`:
+When filing a bug via the **Feedback Modal**:
 
 1. **Build Version**: Ensure it matches the build under test (e.g. `v2.4.0-beta.2`).
 2. **Device Model**: Include device name and Android OS version (e.g. *Pixel 8 Pro, Android 15*).

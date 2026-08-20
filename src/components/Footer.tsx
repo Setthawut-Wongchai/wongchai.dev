@@ -27,8 +27,8 @@ export function Footer() {
             <h4 className="text-xs font-bold text-white uppercase tracking-widest mb-3">{t('footer.navTitle')}</h4>
             <ul className="space-y-2.5 text-xs">
               <li><Link href="/" className="hover:text-white transition-colors">{t('nav.overview')}</Link></li>
-              <li><Link href="/docs" className="hover:text-white transition-colors">{t('nav.docs')}</Link></li>
-              <li><Link href="/releases" className="hover:text-white transition-colors">{t('nav.releases')}</Link></li>
+              <li><Link href="/#experience" className="hover:text-white transition-colors">{t('nav.experience')}</Link></li>
+              <li><Link href="/#contact" className="hover:text-white transition-colors">{t('contact.eyebrow')}</Link></li>
             </ul>
           </div>
 

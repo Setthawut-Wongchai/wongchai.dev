@@ -16,9 +16,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.overview': 'ภาพรวม',
     'nav.experience': 'ประสบการณ์',
     'nav.features': 'ฟีเจอร์ & สถาปัตยกรรม',
-    'nav.docs': 'เอกสารสำหรับ Dev',
-    'nav.releases': 'รีลีส & APK',
-    'nav.tryGemini': 'ทดสอบ APK ล่าสุด',
+    'nav.tryGemini': 'ติดต่อร่วมงาน',
     'nav.badge': 'Android Developer Portal',
     'nav.subtitle': 'Android Developer',
 
@@ -27,9 +25,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'hero.title1': 'สร้างแอป Android ที่เชื่อถือได้',
     'hero.title2': 'ด้วยความแม่นยำและความปลอดภัย',
     'hero.sub': 'ผม เศรษฐวุฒิ (เจมส์) นักพัฒนา Android ที่มีประสบการณ์ 5 ปีในการสร้างและดูแลแอปที่ใช้งานจริง ตั้งแต่แอปเช่าจักรยานไฟฟ้าแบบ Multi-tenant ไปจนถึงระบบยืนยันตัวตนดิจิทัลและการเซ็นข้อมูลอย่างปลอดภัย',
-    'hero.ctaPrimary': 'ลองดาวน์โหลด APK สำหรับ Tester',
-    'hero.ctaSecondary': 'ดูคู่มือ & สถาปัตยกรรม',
-    'hero.liveBadge': 'พร้อมทดสอบบน Android 15 / SDK 35',
+    'hero.ctaPrimary': 'ติดต่อร่วมงาน',
+    'hero.ctaSecondary': 'ดูโค้ดบน GitHub',
 
     // Interactive Tabs (Real skill pillars)
     'tab.overview': 'Architecture',
@@ -131,18 +128,13 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Docs
     'docs.title': 'คู่มือและเอกสารประกอบ',
-    'docs.needApk': 'ต้องการดาวน์โหลด APK ล่าสุด?',
-    'docs.needApkDesc': 'ดาวน์โหลดเวอร์ชันทดสอบที่ผ่านการตรวจสอบพร้อมสแกน QR ได้ที่หน้ารีลีส',
-    'docs.goToReleases': 'ไปยังหน้ารวม Releases →',
   },
   en: {
     // Navbar
     'nav.overview': 'Overview',
     'nav.experience': 'Experience',
     'nav.features': 'Architecture & Features',
-    'nav.docs': 'Dev Docs',
-    'nav.releases': 'Releases & APKs',
-    'nav.tryGemini': 'Get Latest APK',
+    'nav.tryGemini': 'Get in Touch',
     'nav.badge': 'Android Developer Portal',
     'nav.subtitle': 'Android Developer',
 
@@ -151,9 +143,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'hero.title1': 'Building Reliable Android Experiences',
     'hero.title2': 'with Security & Precision',
     'hero.sub': "I'm Setthawut (James), an Android Developer with 5 years of experience building and maintaining production apps — from a multi-tenant e-bike rental platform to secure digital identity and signing systems.",
-    'hero.ctaPrimary': 'Download Tester APK',
-    'hero.ctaSecondary': 'Read System Docs',
-    'hero.liveBadge': 'Verified on Android 15 / SDK 35',
+    'hero.ctaPrimary': 'Get in Touch',
+    'hero.ctaSecondary': 'View Code on GitHub',
 
     // Interactive Tabs (Real skill pillars)
     'tab.overview': 'Architecture',
@@ -255,9 +246,6 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Docs
     'docs.title': 'Documentation Guides',
-    'docs.needApk': 'Need Latest APK?',
-    'docs.needApkDesc': 'Download verified test builds with direct QR scan on the releases hub.',
-    'docs.goToReleases': 'Go to Releases →',
   },
 };
 

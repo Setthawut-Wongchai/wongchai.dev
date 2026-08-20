@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { BookOpen, Terminal, ChevronRight, FileText } from 'lucide-react';
+import { BookOpen, ChevronRight, FileText } from 'lucide-react';
 import type { DocItem } from '@/lib/docs';
 import { useLanguage } from '@/lib/LanguageContext';
 
@@ -43,22 +43,6 @@ export function DocsSidebar({ currentSlug, docs }: DocsSidebarProps) {
               );
             })}
           </nav>
-        </div>
-
-        <div className="rounded-xl bg-zinc-900/60 border border-zinc-800 p-4 space-y-2">
-          <div className="text-xs font-semibold text-zinc-200 flex items-center gap-1.5">
-            <Terminal className="h-3.5 w-3.5 text-indigo-400" />
-            {t('docs.needApk')}
-          </div>
-          <p className="text-[11px] text-zinc-400 leading-relaxed">
-            {t('docs.needApkDesc')}
-          </p>
-          <Link
-            href="/releases"
-            className="inline-flex items-center gap-1 text-[11px] font-semibold text-indigo-400 hover:text-indigo-300 pt-1"
-          >
-            {t('docs.goToReleases')}
-          </Link>
         </div>
       </div>
     </aside>

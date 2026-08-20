@@ -17,7 +17,6 @@ import {
   Cpu,
   Bot
 } from 'lucide-react';
-import type { Release } from '@/db/schema';
 import { useLanguage } from '@/lib/LanguageContext';
 import { profile, localize } from '@/lib/profile';
 
@@ -41,11 +40,7 @@ const staggerContainer: Variants = {
   },
 };
 
-interface HomeClientProps {
-  latestBuild?: Release;
-}
-
-export function HomeClient({ latestBuild }: HomeClientProps) {
+export function HomeClient() {
   const { t, lang } = useLanguage();
   const [activeTab, setActiveTab] = useState<'compose' | 'arch' | 'ai' | 'perf'>('compose');
   const [promptText, setPromptText] = useState('');
@@ -146,39 +141,26 @@ export function HomeClient({ latestBuild }: HomeClientProps) {
             {t('hero.sub')}
           </p>
 
-          {/* Android Gemini Pill Action Buttons */}
+          {/* Hero Action Buttons */}
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
             <Link
-              href="/releases"
+              href="/#contact"
               className="android-pill-cta"
             >
               <b>{t('hero.ctaPrimary')}</b>
               <ArrowRight className="h-4 w-4 text-black" />
             </Link>
 
-            <Link
-              href="/docs"
+            <a
+              href={profile.contact.github}
+              target="_blank"
+              rel="noopener noreferrer"
               className="android-pill-secondary"
             >
               <span>{t('hero.ctaSecondary')}</span>
               <ExternalLink className="h-4 w-4 text-white/70" />
-            </Link>
+            </a>
           </div>
-
-          {/* Live Release Candidate Banner */}
-          {latestBuild && (
-            <div className="pt-8 flex justify-center">
-              <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-[#111214] border border-white/10 text-xs text-[#9aa0a6] hover:border-white/20 transition-all">
-                <span className="h-2 w-2 rounded-full bg-[#4285f4] animate-ping" />
-                <span>
-                  <strong className="text-white">{latestBuild.versionName}</strong> ({latestBuild.environment}) • {t('hero.liveBadge')}
-                </span>
-                <Link href="/releases" className="text-[#4285f4] hover:text-[#9b72cb] font-semibold flex items-center gap-1">
-                  Download APK &rarr;
-                </Link>
-              </div>
-            </div>
-          )}
         </motion.div>
       </section>
 
